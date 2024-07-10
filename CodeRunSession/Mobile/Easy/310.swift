@@ -3,7 +3,7 @@ import Foundation
 let st = readLine()!
 
 var currentStNumber = ""
-var len = 0
+var len = -1
 
 for el in st {
     if el.isLetter {
@@ -16,6 +16,12 @@ for el in st {
     } else {
         currentStNumber.append(el)
     }
+}
+
+if let curNum = Int(currentStNumber) {
+    len += curNum
+} else {
+    len += 1
 }
 
 print(len)
